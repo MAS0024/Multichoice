@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Interactivo</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <button id="theme-toggle-btn" class="theme-toggle">
+        </button>
+
+    <div class="container">
+        <div id="menu-screen" class="screen active">
+            <h1 class="main-title">Examen Interactivo</h1>
+            <p class="subtitle">Pon a prueba tus conocimientos</p>
+            <div class="menu-actions">
+                <button id="start-game-btn" class="btn primary-btn">Iniciar Examen</button>
+                <button id="admin-questions-btn" class="btn secondary-btn">Administrar Preguntas</button>
+            </div>
+        </div>
+
+        <div id="game-screen" class="screen">
+            <div id="hud">
+                <div id="timer">Tiempo restante: <span>--:--</span></div>
+            </div>
+            <div id="all-questions-container"></div>
+            <button id="finish-game-btn" class="btn primary-btn">Finalizar Examen</button>
+        </div>
+
+        <div id="results-screen" class="screen">
+            <h1 class="main-title">Resultados Finales</h1>
+            <div id="results-details"></div>
+            <div id="final-summary"></div>
+            <button id="back-to-menu-btn" class="btn primary-btn">Volver al Menú</button>
+        </div>
+
+        <div id="admin-screen" class="screen">
+            <div class="admin-header">
+                <h1 class="main-title">Administrar Preguntas</h1>
+                <button id="admin-back-to-menu-btn" class="btn secondary-btn">← Volver al Menú</button>
+            </div>
+            <div class="admin-layout">
+                <div class="admin-form-container">
+                    <h3 id="form-title">Añadir Nueva Pregunta</h3>
+                    <form id="question-form">
+                        <input type="hidden" id="question-id">
+                        <textarea id="question-input" placeholder="Escribe el texto de la pregunta..." required></textarea>
+                        
+                        <div class="image-source-selector">
+                            <label><input type="radio" name="imageSource" value="url" checked> URL</label>
+                            <label><input type="radio" name="imageSource" value="file"> Archivo</label>
+                        </div>
+                        <div id="image-url-container">
+                            <input type="text" id="image-url-input" placeholder="https://ejemplo.com/imagen.png">
+                        </div>
+                        <div id="image-file-container" class="hidden">
+                            <input type="file" id="image-file-input" accept="image/*">
+                            <div id="current-image-preview"></div>
+                        </div>
+
+                        <h3>Respuestas</h3>
+                        <div id="answers-container"></div>
+                        <button type="button" id="add-answer-btn" class="btn secondary-btn add-answer-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            Añadir Respuesta
+                        </button>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn primary-btn">💾 Guardar</button>
+                            <button type="button" id="cancel-edit-btn" class="btn secondary-btn hidden">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="admin-list-container">
+                    <h3>Preguntas Existentes</h3>
+                    <div class="import-export-buttons">
+                        <button id="export-btn" class="btn secondary-btn">Exportar</button>
+                        <label for="import-file" class="btn secondary-btn">Importar</label>
+                        <input type="file" id="import-file" accept=".json" style="display: none;">
+                    </div>
+                    <ul id="questions-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <h3 id="modal-title">Confirmación</h3>
+            <p id="modal-message"></p>
+            <div class="modal-actions">
+                <button id="modal-cancel-btn" class="btn secondary-btn">Cancelar</button>
+                <button id="modal-confirm-btn" class="btn primary-btn">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="exam-settings-modal" class="modal">
+        <div class="modal-content">
+            <h3>Configurar Examen</h3>
+            <form id="exam-settings-form">
+                <div class="form-group">
+                    <label for="exam-duration">Duración (minutos)</label>
+                    <input type="number" id="exam-duration" value="10" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="exam-questions-count">Nº de Preguntas</label>
+                    <input type="number" id="exam-questions-count" value="10" min="1" required>
+                </div>
+            </form>
+            <div class="modal-actions">
+                <button id="settings-cancel-btn" class="btn secondary-btn">Cancelar</button>
+                <button id="settings-start-btn" class="btn primary-btn">Comenzar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
