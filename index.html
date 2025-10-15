@@ -13,8 +13,7 @@
 </head>
 <body>
     
-    <button id="theme-toggle-btn" class="theme-toggle">
-        </button>
+    <button id="theme-toggle-btn" class="theme-toggle"></button>
 
     <div class="container">
         <div id="menu-screen" class="screen active">
@@ -22,9 +21,8 @@
             <p class="subtitle">Ponte en practica para el 1er Parcial</p>
             <div class="menu-actions">
                 <button id="start-game-btn" class="btn primary-btn">Iniciar Examen</button>
-
-                <!--<button id="admin-questions-btn" class="btn secondary-btn">Administrar Preguntas</button>-->
-            </div>
+               <!-- <button id="admin-questions-btn" class="btn secondary-btn">Administrar Preguntas</button>-->
+                </div>
         </div>
 
         <div id="game-screen" class="screen">
@@ -102,7 +100,6 @@
             </div>
         </div>
     </div>
-
     <div id="exam-settings-modal" class="modal">
         <div class="modal-content">
             <h3>Configurar Examen</h3>
@@ -120,6 +117,13 @@
                 <button id="settings-cancel-btn" class="btn secondary-btn">Cancelar</button>
                 <button id="settings-start-btn" class="btn primary-btn">Comenzar</button>
             </div>
+        </div>
+    </div>
+
+    <div id="image-viewer-modal" class="modal image-viewer">
+        <button id="image-viewer-close" class="close-btn">&times;</button>
+        <div class="image-content-wrapper">
+            <img id="image-viewer-img" src="" alt="Vista ampliada de la imagen">
         </div>
     </div>
 
