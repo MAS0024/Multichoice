@@ -16,12 +16,10 @@
     --transition-speed: 0.3s;
 }
 
-/* TAMAÑO GLOBAL AJUSTADO */
 html {
-    font-size: 80%; /* Ajustado al 80% */
+    font-size: 80%; 
 }
 
-/* --- ESTILOS DEL MODO OSCURO --- */
 body.dark-mode {
     --bg-color: #121212;
     --surface-color: #1e1e1e;
@@ -57,7 +55,6 @@ body {
     margin: auto;
 }
 
-/* --- INTERRUPTOR DE TEMA --- */
 .theme-toggle {
     position: fixed;
     top: 1.5rem;
