@@ -78,14 +78,18 @@
                     </form>
                 </div>
                 <div class="admin-list-container">
-                    <h3>Preguntas Existentes</h3>
-                    <div class="import-export-buttons">
-                        <button id="export-btn" class="btn secondary-btn">Exportar</button>
-                        <label for="import-file" class="btn secondary-btn">Importar</label>
-                        <input type="file" id="import-file" accept=".json" style="display: none;">
-                    </div>
-                    <ul id="questions-list"></ul>
-                </div>
+    <h3>Preguntas Existentes</h3>
+    <div class="selection-controls">
+        <label><input type="checkbox" id="select-all-checkbox"> Seleccionar Todo</label>
+        <button id="delete-selected-btn" class="btn secondary-btn hidden">Eliminar Seleccionadas</button>
+    </div>
+    <div class="import-export-buttons">
+        <button id="export-btn" class="btn secondary-btn">Exportar</button>
+        <label for="import-file" class="btn secondary-btn">Importar</label>
+        <input type="file" id="import-file" accept=".json" style="display: none;">
+    </div>
+    <ul id="questions-list"></ul>
+</div>
             </div>
         </div>
     </div>

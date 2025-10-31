@@ -41,6 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageViewerImg = document.getElementById('image-viewer-img');
     const imageViewerClose = document.getElementById('image-viewer-close');
 
+    // NUEVOS ELEMENTOS PARA SELECCIÓN MÚLTIPLE
+    const deleteSelectedBtn = document.getElementById('delete-selected-btn');
+    const selectAllCheckbox = document.getElementById('select-all-checkbox');
+
     const sunIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
     const moonIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
     const editIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>`;
@@ -130,16 +134,85 @@ document.addEventListener('DOMContentLoaded', () => {
             else alert('Una pregunta debe tener al menos 2 respuestas.');
         });
     };
+    
+    // FUNCIÓN AUXILIAR PARA ACTUALIZAR EL ESTADO DEL BOTÓN DE ELIMINAR Y EL CHECKBOX "SELECCIONAR TODO"
+    const updateDeleteSelectedButtonState = () => {
+        if (!questionsList || !deleteSelectedBtn || !selectAllCheckbox) return;
+        const checkboxes = questionsList.querySelectorAll('.question-checkbox');
+        const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
+        const total = checkboxes.length;
+
+        deleteSelectedBtn.classList.toggle('hidden', checkedCount === 0);
+        
+        if (total === 0) {
+            selectAllCheckbox.checked = false;
+            selectAllCheckbox.indeterminate = false;
+        } else if (checkedCount === 0) {
+            selectAllCheckbox.checked = false;
+            selectAllCheckbox.indeterminate = false;
+        } else if (checkedCount === total) {
+            selectAllCheckbox.checked = true;
+            selectAllCheckbox.indeterminate = false;
+        } else {
+            selectAllCheckbox.checked = false;
+            selectAllCheckbox.indeterminate = true;
+        }
+    };
 
     const renderAdminList = () => {
         if(!questionsList) return;
         questionsList.innerHTML = '';
+        
+        // Reiniciar el estado del checkbox "Seleccionar Todo"
+        if (selectAllCheckbox) {
+            selectAllCheckbox.checked = false;
+            selectAllCheckbox.indeterminate = false;
+        }
+
         allQuestions.forEach((q, index) => {
             const li = document.createElement('li');
-            li.innerHTML = `<span>${q.question.substring(0, 40)}...</span><div class="action-buttons"><button data-index="${index}" class="edit-btn">${editIcon}</button><button data-index="${index}" class="delete-btn">${deleteIcon}</button></div>`;
+            // MODIFICACIÓN: Agregar un checkbox con el ID de la pregunta
+            li.innerHTML = `<input type="checkbox" data-question-id="${q.id}" class="question-checkbox"><span>${q.question.substring(0, 40)}...</span><div class="action-buttons"><button data-index="${index}" class="edit-btn">${editIcon}</button><button data-index="${index}" class="delete-btn">${deleteIcon}</button></div>`;
             questionsList.appendChild(li);
         });
+        
+        // Agregar listener para actualizar el estado del botón cuando un checkbox cambia
+        questionsList.querySelectorAll('.question-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', updateDeleteSelectedButtonState);
+        });
+        
+        updateDeleteSelectedButtonState(); // Actualizar el estado inicial
     };
+
+    if(selectAllCheckbox) {
+        selectAllCheckbox.addEventListener('change', () => {
+            const checkboxes = questionsList.querySelectorAll('.question-checkbox');
+            checkboxes.forEach(cb => cb.checked = selectAllCheckbox.checked);
+            updateDeleteSelectedButtonState();
+        });
+    }
+
+    if (deleteSelectedBtn) {
+        deleteSelectedBtn.addEventListener('click', () => {
+            const selectedCheckboxes = questionsList.querySelectorAll('.question-checkbox:checked');
+            if (selectedCheckboxes.length === 0) {
+                alert('No hay preguntas seleccionadas para eliminar.');
+                return;
+            }
+            
+            if (confirm(`¿Estás seguro de que quieres eliminar las ${selectedCheckboxes.length} pregunta(s) seleccionada(s)?`)) {
+                // Obtener los IDs de las preguntas a eliminar
+                const idsToDelete = Array.from(selectedCheckboxes).map(cb => parseInt(cb.dataset.questionId));
+                
+                // Filtrar el array de preguntas, manteniendo solo las que NO están en la lista de eliminación
+                allQuestions = allQuestions.filter(q => !idsToDelete.includes(q.id));
+                
+                saveQuestions();
+                renderAdminList();
+                resetForm(); // Limpiar el formulario en caso de que la pregunta que se estaba editando haya sido eliminada
+            }
+        });
+    }
 
     if(questionForm) questionForm.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -169,17 +242,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if(questionsList) questionsList.addEventListener('click', (e) => {
+        // Ignorar clics en el checkbox para que no interfieran con la edición/eliminación individual
+        if (e.target.closest('.question-checkbox')) return;
+
         const button = e.target.closest('button');
         if (!button) return;
         const index = button.dataset.index;
         if (index === undefined) return;
+
+        // Lógica de eliminación individual (manteniendo la compatibilidad)
         if (button.classList.contains('delete-btn')) {
             if (confirm('¿Estás seguro de que quieres eliminar esta pregunta?')) {
                 allQuestions.splice(index, 1);
                 saveQuestions();
                 renderAdminList();
+                resetForm(); // Limpiar el formulario en caso de que la pregunta que se estaba editando haya sido eliminada
             }
-        } else if (button.classList.contains('edit-btn')) {
+        } 
+        // Lógica de edición individual
+        else if (button.classList.contains('edit-btn')) {
             const questionToEdit = allQuestions[index];
             resetForm();
             formTitle.textContent = 'Editar Pregunta';
