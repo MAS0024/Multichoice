@@ -73,28 +73,37 @@ document.addEventListener('DOMContentLoaded', () => {
         applyTheme(newTheme);
     });
 
-    // MODIFICADO: Ahora carga de un solo archivo y añade la temática si falta
+    // MODIFICADO: Lógica de carga para priorizar localStorage, luego el archivo JSON
     const loadQuestions = async () => {
+        const savedQuestions = localStorage.getItem('quizQuestions');
+        if (savedQuestions) {
+            allQuestions = JSON.parse(savedQuestions);
+            return; // Se cargaron las preguntas del usuario (prioridad 1)
+        }
+
+        // Si no hay preguntas guardadas, intentar cargar el archivo predeterminado (prioridad 2)
         try {
             const response = await fetch('default-questions.json');
-            if (!response.ok) throw new Error(`Error HTTP: ${response.status}`);
-            const defaultQuestions = await response.json();
+            if (!response.ok) {
+                // No se pudo obtener el archivo (ej: 404 o problema de CORS)
+                console.warn(`No se pudo obtener el archivo 'default-questions.json'. Estado HTTP: ${response.status}.`);
+                throw new Error("Falló la carga del archivo de preguntas.");
+            }
             
-            // Asegurar que todas las preguntas tengan una temática
+            let defaultQuestions = await response.json();
+            
+            // Asegurar que todas las preguntas tengan una temática (lógica anterior)
             defaultQuestions.forEach(q => {
                 if (!q.thematic) q.thematic = 'parcial1'; // Default a parcial1
             });
-
-            const savedQuestions = localStorage.getItem('quizQuestions');
-            if (savedQuestions) {
-                allQuestions = JSON.parse(savedQuestions);
-            } else {
-                allQuestions = defaultQuestions;
-                saveQuestions(); 
-            }
+            
+            allQuestions = defaultQuestions;
+            saveQuestions(); // Guardar las preguntas predeterminadas para futuras ejecuciones
+            
         } catch (error) {
-            console.error("No se pudieron cargar las preguntas predeterminadas.", error);
-            allQuestions = JSON.parse(localStorage.getItem('quizQuestions') || '[]');
+            // Fallback: Si el fetch o la lectura fallan, inicializar con lista vacía (prioridad 3)
+            console.error("No se pudieron cargar las preguntas predeterminadas. Inicializando con lista vacía.", error);
+            allQuestions = []; 
         }
     };
 
