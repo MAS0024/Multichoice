@@ -11,7 +11,8 @@
       "Velocidad de Modulacion",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760113551780,
@@ -25,7 +26,8 @@
       "Ambas a y c",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760113796836,
@@ -39,7 +41,8 @@
       "Multiplexacion por Division de Frecuencias",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760114237926,
@@ -53,7 +56,8 @@
       "Demodulador",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760114367759,
@@ -67,7 +71,8 @@
       "Ancho de Banda",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 5
+    "correct": 5,
+    "thematic": "parcial1"
   },
   {
     "id": 1760114469933,
@@ -81,7 +86,8 @@
       "Velocidad de Transmision Serie",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760115141141,
@@ -96,7 +102,8 @@
       "Router",
       "Ninguna de las Anteriores es Correcta"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760115266109,
@@ -110,7 +117,8 @@
       "Todas las Anteriores son Correctas",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760115572662,
@@ -123,7 +131,8 @@
       "Una norma serie para comunicaciones síncronas creada originalmente para definir la interaccion entre una computadora y un procesador Front-End",
       "Ninguna de las Anteriores es Correcta."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760116037050,
@@ -137,7 +146,8 @@
       "Velocidad de Transmision Serie",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760116248766,
@@ -151,7 +161,8 @@
       "Todas las Anteriores son Correctas",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760116381328,
@@ -165,7 +176,8 @@
       "Paquete",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760116801303,
@@ -175,7 +187,8 @@
       "Verdadero",
       "Falso"
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760117955728,
@@ -189,7 +202,8 @@
       "El uso correcto en comunicaciones de dispositivos Domoticos",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760118157002,
@@ -202,7 +216,8 @@
       "Al final dentro del bloque de datos",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760118442694,
@@ -218,7 +233,8 @@
       "Todas las Anteriores son Correctas",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 5
+    "correct": 5,
+    "thematic": "parcial1"
   },
   {
     "id": 1760118622307,
@@ -232,7 +248,8 @@
       "Software de Aplicacion",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760119348522,
@@ -242,7 +259,8 @@
       "Verdadeo",
       "Falso"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760119985797,
@@ -256,7 +274,8 @@
       "Todas las anteriores son correctas",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760120136339,
@@ -272,7 +291,8 @@
       "Todas las Anteriores son Correctas",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 6
+    "correct": 6,
+    "thematic": "parcial1"
   },
   {
     "id": 1760123941351,
@@ -286,7 +306,8 @@
       "Sesión",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760124046501,
@@ -300,7 +321,8 @@
       "Red",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760124161244,
@@ -314,7 +336,8 @@
       "Un Modelo diseñado para Sistemas Cloud.",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760124210002,
@@ -324,7 +347,8 @@
       "verdadero",
       "Falso"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760124270626,
@@ -338,7 +362,8 @@
       "Sesión",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760124312000,
@@ -348,7 +373,8 @@
       "Falso",
       "verdadero"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760124353293,
@@ -358,7 +384,8 @@
       "Verdadero",
       "Falso"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760124438308,
@@ -372,7 +399,8 @@
       "Ambas a, c, y d",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760124496009,
@@ -382,7 +410,8 @@
       "verdadero",
       "Falso"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760124533303,
@@ -392,7 +421,8 @@
       "verdadero ",
       "Falso"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760125093878,
@@ -410,7 +440,8 @@
       "Todas las anteriores son correctas",
       "Ninguna de las anteriores es Correcta."
     ],
-    "correct": 6
+    "correct": 6,
+    "thematic": "parcial1"
   },
   {
     "id": 1760125175825,
@@ -425,7 +456,8 @@
       "Ambas a y c",
       "Ambas a y d"
     ],
-    "correct": 5
+    "correct": 5,
+    "thematic": "parcial1"
   },
   {
     "id": 1760125224991,
@@ -439,7 +471,8 @@
       "Todas las Anteriores son Correctas",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760125316588,
@@ -453,7 +486,8 @@
       "Fibra Óptica",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760125407887,
@@ -469,7 +503,8 @@
       "Ambas a, b y c",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 6
+    "correct": 6,
+    "thematic": "parcial1"
   },
   {
     "id": 1760125498460,
@@ -485,7 +520,8 @@
       "Ambas a y c",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760125534416,
@@ -495,7 +531,8 @@
       "Verdadero",
       "Falso"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760125595992,
@@ -510,7 +547,8 @@
       "Antetecho",
       "Ninguna de las Anteriores es Correcta"
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760125672411,
@@ -524,7 +562,8 @@
       "Todas las Anteriores son Correctas",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760125720008,
@@ -538,7 +577,8 @@
       "Todas las Anteriores son Correctas",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760317553467,
@@ -552,7 +592,8 @@
       "El aumento del nivel de colisiones.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760317661680,
@@ -568,7 +609,8 @@
       "Conductor terrestre.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760317715888,
@@ -582,7 +624,8 @@
       "Todas la anteriores son correctas.",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760317792649,
@@ -596,7 +639,8 @@
       "Todas las Anteriores son correctas.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760317850840,
@@ -609,7 +653,8 @@
       "HAN",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760317947420,
@@ -625,7 +670,8 @@
       "Conductor terrestre.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760318042072,
@@ -639,7 +685,8 @@
       "Ambas a y b.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760318096728,
@@ -655,7 +702,8 @@
       "Todas las Anteriores son correctas.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760318127195,
@@ -665,7 +713,8 @@
       "Verdadero",
       "Falso"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760318171513,
@@ -679,7 +728,8 @@
       "La afirmación de la pregunta es incorrecta",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760318358482,
@@ -694,7 +744,8 @@
       "Ambas A, C y D",
       "Ninguna de las Anteriores es Correcta"
     ],
-    "correct": 5
+    "correct": 5,
+    "thematic": "parcial1"
   },
   {
     "id": 1760318453541,
@@ -710,7 +761,8 @@
       "Ambas a, c, d y e.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 6
+    "correct": 6,
+    "thematic": "parcial1"
   },
   {
     "id": 1760318524734,
@@ -726,7 +778,8 @@
       "ARIN",
       "Ninguna de las Anteriores es Correcta."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760318682947,
@@ -742,7 +795,8 @@
       "vBNS",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760318748083,
@@ -758,7 +812,8 @@
       "ARIN",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760318876684,
@@ -774,7 +829,8 @@
       "Todas las Anteriores son correctas.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760318989486,
@@ -790,7 +846,8 @@
       "RFC",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760319059259,
@@ -806,7 +863,8 @@
       "Infrarrojo.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760319145813,
@@ -822,7 +880,8 @@
       "ARIN",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760319231280,
@@ -838,7 +897,8 @@
       "INNOVA RED",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 6
+    "correct": 6,
+    "thematic": "parcial1"
   },
   {
     "id": 1760319383780,
@@ -848,7 +908,8 @@
       "Verdadero.",
       "Falso."
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760319492386,
@@ -864,7 +925,8 @@
       "Hub",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760319568418,
@@ -880,7 +942,8 @@
       "Ambas a, b y c.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760319617146,
@@ -890,7 +953,8 @@
       "Verdadero.",
       "Falso."
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760319705494,
@@ -906,7 +970,8 @@
       "Server.",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760319770349,
@@ -922,7 +987,8 @@
       "Land Driver.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 5
+    "correct": 5,
+    "thematic": "parcial1"
   },
   {
     "id": 1760319811546,
@@ -932,7 +998,8 @@
       "Verdadero.",
       "Falso."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760319891773,
@@ -948,7 +1015,8 @@
       "Ambas b y c.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 5
+    "correct": 5,
+    "thematic": "parcial1"
   },
   {
     "id": 1760320050874,
@@ -962,7 +1030,8 @@
       "Ambas b y d",
       "Ninguna de las anteriores es Correcta"
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760320285002,
@@ -978,7 +1047,8 @@
       "Active Directory.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 6
+    "correct": 6,
+    "thematic": "parcial1"
   },
   {
     "id": 1760359013552,
@@ -994,7 +1064,8 @@
       "Switch.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 6
+    "correct": 6,
+    "thematic": "parcial1"
   },
   {
     "id": 1760359096083,
@@ -1008,7 +1079,8 @@
       "Todas las Anteriores son correctas.",
       "Ninguna de las anteriores es Correcta."
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760359176582,
@@ -1025,7 +1097,8 @@
       "Ambas b, d, e y f.",
       "Ninguna de las anteriores es Correcta."
     ],
-    "correct": 6
+    "correct": 6,
+    "thematic": "parcial1"
   },
   {
     "id": 1760359268249,
@@ -1040,7 +1113,8 @@
       "Hub.",
       "Ninguna de las Anteriores es Correcta."
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760359346700,
@@ -1054,7 +1128,8 @@
       "Softphones.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760359404179,
@@ -1070,7 +1145,8 @@
       "Land Driver/Repetidor",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 6
+    "correct": 6,
+    "thematic": "parcial1"
   },
   {
     "id": 1760359468571,
@@ -1086,7 +1162,8 @@
       "Primario.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760359620494,
@@ -1100,7 +1177,8 @@
       "Todas las Anteriores son Correctas",
       "Ninguna de las anteriores es Correcta."
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760359664772,
@@ -1113,7 +1191,8 @@
       "Instalar un Softphone",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760359714338,
@@ -1128,7 +1207,8 @@
       "Hub.",
       "Ninguna de las Anteriores es Correcta."
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760360163084,
@@ -1142,7 +1222,8 @@
       "VLAN.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760360418093,
@@ -1152,7 +1233,8 @@
       "Verdadero.",
       "Falso."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760360480868,
@@ -1168,7 +1250,8 @@
       "Todas las Anteriores son correctas.",
       " Ninguna de las Anteriores es correcta."
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760360539773,
@@ -1184,7 +1267,8 @@
       "Todas las Anteriores son correctas.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760360586355,
@@ -1197,7 +1281,8 @@
       "Todas las Anteriores son correctas",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760360636849,
@@ -1211,7 +1296,8 @@
       "Todas las Anteriores son correctas.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760360672782,
@@ -1227,7 +1313,8 @@
       "Todas las Anteriores son correctas.",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 5
+    "correct": 5,
+    "thematic": "parcial1"
   },
   {
     "id": 1760360719164,
@@ -1237,7 +1324,8 @@
       "Verdadero",
       "Falso."
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760360772482,
@@ -1251,7 +1339,8 @@
       "Todas las Anteriores son correctas",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760360996192,
@@ -1265,7 +1354,8 @@
       "Ambas a y b",
       "Ninguna de las Anteriores"
     ],
-    "correct": 5
+    "correct": 5,
+    "thematic": "parcial1"
   },
   {
     "id": 1760361141762,
@@ -1279,7 +1369,8 @@
       "Servicio.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760361363110,
@@ -1295,7 +1386,8 @@
       "Todas las anteriores son correctas",
       "Ninguna de las anteriores son correctas"
     ],
-    "correct": 6
+    "correct": 6,
+    "thematic": "parcial1"
   },
   {
     "id": 1760361454628,
@@ -1309,7 +1401,8 @@
       "SNMP.",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760361522883,
@@ -1325,7 +1418,8 @@
       "Aviso.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760361543309,
@@ -1335,7 +1429,8 @@
       "Verdadero.",
       "Falso."
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760361588419,
@@ -1351,7 +1446,8 @@
       "Todas las anteriores son correctas",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760361653708,
@@ -1365,7 +1461,8 @@
       "Ambas a y c.",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760361821721,
@@ -1378,7 +1475,8 @@
       "Todas las Anteriores es Correcta",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760361856590,
@@ -1388,7 +1486,8 @@
       "Verdadero.",
       "Falso."
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760361951961,
@@ -1400,7 +1499,8 @@
       "SNMP.",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760362122160,
@@ -1410,7 +1510,8 @@
       "Verdadero.",
       "Falso."
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760362181048,
@@ -1423,7 +1524,8 @@
       "Realizar el Control Multipunto",
       "Controlar el Clúster redundante"
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760362335947,
@@ -1433,7 +1535,8 @@
       "Verdadero",
       "Falso"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760362373303,
@@ -1448,7 +1551,8 @@
       "Ambas a y d.",
       "Ninguna de las Anteriores es Correcta."
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760362424246,
@@ -1458,7 +1562,8 @@
       "Verdadero",
       "Falso"
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760362458442,
@@ -1468,7 +1573,8 @@
       "Verdadero.",
       "Falso."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760362514843,
@@ -1482,7 +1588,8 @@
       "Ambas A y B.",
       "Ambas B y D."
     ],
-    "correct": 5
+    "correct": 5,
+    "thematic": "parcial1"
   },
   {
     "id": 1760362628520,
@@ -1496,7 +1603,8 @@
       "Spoofing.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760362665566,
@@ -1506,7 +1614,8 @@
       "Verdadero.",
       "Falso."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760362741659,
@@ -1521,7 +1630,8 @@
       "Ambas a, c y e",
       "Ninguna de las anteriores es correcta."
     ],
-    "correct": 5
+    "correct": 5,
+    "thematic": "parcial1"
   },
   {
     "id": 1760362944400,
@@ -1535,7 +1645,8 @@
       "199.37.0.0 — 199.37.255.254",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760362992000,
@@ -1549,7 +1660,8 @@
       "Ambas c y d.",
       "Ninguna de las anteriores es Correcta"
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363082330,
@@ -1564,7 +1676,8 @@
       "255.255.255.255",
       "Ninguna de las Anteriores es Correcta."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363112678,
@@ -1578,7 +1691,8 @@
       "222.37.2.0 — 222.37.2.255",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363181553,
@@ -1592,7 +1706,8 @@
       "Clase E",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363209707,
@@ -1606,7 +1721,8 @@
       "Clase E.",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363278061,
@@ -1620,7 +1736,8 @@
       "200.1.1.128",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363356150,
@@ -1634,7 +1751,8 @@
       "157.89.0.0",
       "Ninguna de las Anteriores es la correcta"
     ],
-    "correct": 5
+    "correct": 5,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363430879,
@@ -1648,7 +1766,8 @@
       "Redes = 4098; Hosts = 14",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363474638,
@@ -1664,7 +1783,8 @@
       "Direcciones Clase D.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363541805,
@@ -1677,7 +1797,8 @@
       "172.66.90.0",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363590380,
@@ -1691,7 +1812,8 @@
       "Ambas a y b.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363616583,
@@ -1705,7 +1827,8 @@
       "Ambas a y b.",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363642059,
@@ -1719,7 +1842,8 @@
       "172.16.3.32 a 172.16.3.57",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363699618,
@@ -1733,7 +1857,8 @@
       "140.90.109.112",
       "Ninguna de las Anteriores es la correcta"
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363732758,
@@ -1747,7 +1872,8 @@
       "Ambas a y c.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363768626,
@@ -1761,7 +1887,8 @@
       "Ambas a y c.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363804975,
@@ -1775,7 +1902,8 @@
       "Ambas a y b.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363829466,
@@ -1789,7 +1917,8 @@
       "200.0.0.255",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363858558,
@@ -1803,7 +1932,8 @@
       "Ambas b y c.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760363972830,
@@ -1816,7 +1946,8 @@
       "Router>; enable; Router# RIP",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760364085564,
@@ -1829,7 +1960,8 @@
       "Network “Nro Ip + Máscara",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760364277421,
@@ -1841,7 +1973,8 @@
       "(Router_config)# interface serial_ethernet 0/0 (Router_config)# Ip address 192.168.1.2 255.255.0",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760364320954,
@@ -1854,7 +1987,8 @@
       "BGP – Vector distancia Mejorado",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760364362200,
@@ -1868,7 +2002,8 @@
       "Modo protegido",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760364404828,
@@ -1881,7 +2016,8 @@
       "Router OPDF.",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760364446650,
@@ -1894,7 +2030,8 @@
       "Las redes directamente conectadas al Firewall",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760364513227,
@@ -1907,7 +2044,8 @@
       "ip route 20.0.0.0 255.0.0.0 072.168.1.1",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760364569706,
@@ -1920,7 +2058,8 @@
       "Show interfaces.",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760364635731,
@@ -1933,7 +2072,8 @@
       "Enable secret.",
       "Ninguna de las Anteriores es Correcta."
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760538748926,
@@ -1950,7 +2090,8 @@
       "Ambas a y b",
       "Ninguna de las anteriores es Correcta"
     ],
-    "correct": 6
+    "correct": 6,
+    "thematic": "parcial1"
   },
   {
     "id": 1760538779602,
@@ -1966,7 +2107,8 @@
       "Land Driver",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760538838436,
@@ -1982,7 +2124,8 @@
       "Todas las anteriores son correctas",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760538902178,
@@ -1996,7 +2139,8 @@
       "Sesión",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 5
+    "correct": 5,
+    "thematic": "parcial1"
   },
   {
     "id": 1760539206945,
@@ -2010,7 +2154,8 @@
       "Interferencia",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760539244011,
@@ -2024,7 +2169,8 @@
       "PAN",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760539295700,
@@ -2039,7 +2185,8 @@
       "Ambas a y c",
       "Ninguna de las Anteriores es Correcta"
     ],
-    "correct": 5
+    "correct": 5,
+    "thematic": "parcial1"
   },
   {
     "id": 1760539345891,
@@ -2053,7 +2200,8 @@
       "Transmisión Duplex",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760539528667,
@@ -2069,7 +2217,8 @@
       "Host a Host",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760539577328,
@@ -2084,7 +2233,8 @@
       "Ambas a, c y d",
       "Ninguna de las Anteriores es Correcta"
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760539641937,
@@ -2098,7 +2248,8 @@
       "La afirmación de la pregunta es incorrecta",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 4
+    "correct": 4,
+    "thematic": "parcial1"
   },
   {
     "id": 1760539693952,
@@ -2116,7 +2267,8 @@
       "Todas las anteriores son correctas",
       "Ninguna de las anteriores es Correcta"
     ],
-    "correct": 6
+    "correct": 6,
+    "thematic": "parcial1"
   },
   {
     "id": 1760539771218,
@@ -2132,7 +2284,8 @@
       "Ambas a y c",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760539839731,
@@ -2148,7 +2301,8 @@
       "Ambas b y c",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 5
+    "correct": 5,
+    "thematic": "parcial1"
   },
   {
     "id": 1760539869182,
@@ -2163,7 +2317,8 @@
       "Ambas b y c",
       "Ninguna de las Anteriores es Correcta"
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760539918378,
@@ -2179,7 +2334,8 @@
       "Ambas a y b",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760539956220,
@@ -2192,7 +2348,8 @@
       "Clase B Privada",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 0
+    "correct": 0,
+    "thematic": "parcial1"
   },
   {
     "id": 1760539996871,
@@ -2208,7 +2365,8 @@
       "Todas las Anteriores son correctas",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 2
+    "correct": 2,
+    "thematic": "parcial1"
   },
   {
     "id": 1760540037260,
@@ -2222,7 +2380,8 @@
       "La aparición de Topologías en Malla.",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760540623352,
@@ -2238,7 +2397,8 @@
       "Ambas a y b",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 7
+    "correct": 7,
+    "thematic": "parcial1"
   },
   {
     "id": 1760540786317,
@@ -2252,7 +2412,8 @@
       "Terabytes",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760540865199,
@@ -2266,7 +2427,8 @@
       "Alohanet",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760540980645,
@@ -2281,7 +2443,8 @@
       "Ambas b, c y d",
       "Ninguna de las Anteriores es Correcta"
     ],
-    "correct": 5
+    "correct": 5,
+    "thematic": "parcial1"
   },
   {
     "id": 1760541034413,
@@ -2297,7 +2460,8 @@
       "Ambas b y c",
       "Ninguna de las Anteriores es correcta"
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
   },
   {
     "id": 1760541199882,
@@ -2311,7 +2475,8 @@
       "Sesión",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 3
+    "correct": 3,
+    "thematic": "parcial1"
   },
   {
     "id": 1760541252897,
@@ -2327,7 +2492,8 @@
       "Todas las Anteriores son correctas",
       "Ninguna de las Anteriores es correcta."
     ],
-    "correct": 5
+    "correct": 5,
+    "thematic": "parcial1"
   },
   {
     "id": 1760541322506,
@@ -2341,6 +2507,315 @@
       "Frecuencia",
       "Ninguna de las anteriores es Correcta"
     ],
-    "correct": 1
+    "correct": 1,
+    "thematic": "parcial1"
+  },
+  {
+    "id": 1761931441526,
+    "question": "Dentro de una Red WAN, cuando nos referimos a SONET estamos hablando de:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-005-Sonet.jpg",
+    "answers": [
+      "Una tecnología estandarizada de comunicaciones de alta velocidad.",
+      "Un tipo de servidor de acceso para módems.",
+      "Un Protocolo de Transporte para Redes en Anillos de Fibra Óptica.",
+      "Una tecnología estandarizada de comunicaciones digitales.",
+      "Un Protocolo de Transporte para Redes Privadas Virtuales.",
+      "Ninguna de las Anteriores es correcta."
+    ],
+    "correct": 2,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761931495374,
+    "question": "Dentro del Protocolo Frame Relay la unidad de transmisión o paquete a enviar por un sistema físico heterogéneo corresponde a la denominación de:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-006-Frame-MTU.jpg",
+    "answers": [
+      "Datagrama.",
+      "Cluster.",
+      "Frame o MTU.",
+      "NTFS",
+      "ISDN.",
+      "Ninguna de las Anteriores es correcta."
+    ],
+    "correct": 2,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761931535939,
+    "question": "Dentro de una Red WAN, cuando nos referimos a xDSL estamos hablando de:\n",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-007-xDSL.jpg",
+    "answers": [
+      "Una tecnología estandarizada de comunicaciones de alta velocidad.",
+      "Un tipo de servidor de acceso para módems.",
+      "Un tipo de DTU para canales punto a punto digital.",
+      "Una tecnología estandarizada de comunicaciones digitales.",
+      "Ambas a y d.",
+      "Ninguna de las Anteriores es correcta."
+    ],
+    "correct": 4,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761931576912,
+    "question": "La contratación de Un Canal E1 para una portadora de WAN para acceder a Internet nos permite acceder a un ancho de banda de 2 MBPS sabiendo que dicho canal corresponde a los Estándares de normas europeas. El tipo de portadora contratada corresponde a:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-003-Canal-E1.jpg",
+    "answers": [
+      "ISDN.",
+      "ADSL.",
+      "Cablemódem (HFC).",
+      "PDH-T-CARRIER.",
+      "X25.",
+      "Ninguna de las Anteriores es correcta."
+    ],
+    "correct": 3,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761931662347,
+    "question": "Las partes topológicas de una red de Cablemodem (HFC) como estructura de transporte de Video y Datos para Redes WAN de tipo híbrida corresponden a:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-001-Partes-de-Red---Cablemodem.jpg",
+    "answers": [
+      "Enlace Satelital.",
+      "Cabecera.",
+      "Red Troncal.",
+      "Red de Distribución.",
+      "Red de abonado.",
+      "Ambas a, b , c y d.",
+      "Ambas a, b, c y e.",
+      "Ambas b, c, d y e.",
+      "Ninguna de las anteriores es Correcta."
+    ],
+    "correct": 7,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761931701872,
+    "question": "Dentro de una Red WAN con tecnología ATM los circuitos conmutados establecidos entre nodo y nodo se los denomina:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-001-Circuito-Virtual-ATM.jpg",
+    "answers": [
+      "Circuito Real.",
+      "Circuito Encaminado.",
+      "Circuito Virtual.",
+      "Canal Físico.",
+      "Transroute",
+      "Ninguna de las Anteriores es correcta."
+    ],
+    "correct": 2,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761931743589,
+    "question": "La extensión aplicada de las redes Ethernet sobre un par de cable trenzado a distancias en Redes MAN de más de 1,800 metros se la denomina:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-010-LRE.jpg",
+    "answers": [
+      "HDSL.",
+      "LRE.",
+      "PDH-T-CARRIER.",
+      "ISDN.",
+      "SONET.",
+      "SLA.",
+      "Ninguna de las Anteriores es Correcta."
+    ],
+    "correct": 1,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761931780226,
+    "question": "Dentro de las portadoras para el transporte de información existe lo que se denomina PDH-T--CARRIER que corresponde a:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-009-PDH-T.jpg",
+    "answers": [
+      "Una tecnología estandarizada de comunicaciones para redes LANS.",
+      "Un tipo de servidor de acceso para módems.",
+      "Un Protocolo sincrónico de Transporte para Redes Fibra Óptica.",
+      "Un protocolo de transporte de alta velocidad de tipo Plesincrónico",
+      "Un Protocolo de Transporte para Redes Privadas Virtuales.",
+      "Ninguna de las Anteriores es correcta."
+    ],
+    "correct": 3,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761931826304,
+    "question": "La tecnología ISDN o lo que se denomina Red Digital de Servicios Integrados divide el ancho de banda en canales de acuerdo al siguiente detalle:\n",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-008-Servicios-ISDN.jpg",
+    "answers": [
+      "Un Canal de Tipo D de 64 Kbps utilizado para información de Control.",
+      "Canales de Tipo B de 64 Kbps utilizados para Transmisión de Voz y Datos.",
+      "Canales de Tipo H de 64 Kbps utilizados para información de Control.",
+      "Canales de Tipo H de 64 Kbps utilizados para Transmisión de Voz y Datos.",
+      "Ambas a y b.",
+      "Ambas a y d.",
+      "Ninguna de las Anteriores es Correcta."
+    ],
+    "correct": 4,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761931846170,
+    "question": "Dentro de las Redes WAN con tecnología ATM se realiza la verificación de errores en los nodos que origina:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-002-Errores-Atm.jpg",
+    "answers": [
+      "La Corrección de los Paquetes.",
+      "La Detección de Errores.",
+      "La Retransmisión de los paquetes del origen.",
+      "Ambas a y c.",
+      "Ambas b y c",
+      "Ninguna de las Anteriores es correcta."
+    ],
+    "correct": 4,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761931989925,
+    "question": "Decimos que el Cablemódem es una estructura de transporte de Video y Datos para Redes WAN de tipo híbrida, que posee desde la cabecera hasta la red de abonado como medio físico de transmisión a:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-011-Cablemodem.jpg",
+    "answers": [
+      "Microondas.",
+      "Cable Coaxil.",
+      "WIRELESS.",
+      "Fibra Óptica Monomodo.",
+      "Ambas B y D.",
+      "Ninguna de las Anteriores es correcta."
+    ],
+    "correct": 4,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761932034787,
+    "question": "La tecnología HDSL es utilizada por las compañías de comunicaciones para entregar comunicaciones a Internet a centro de procesamiento de datos, con un ancho de banda superior a 1,54 MBPS, El canal ascendente y descendente de comunicaciones son del tipo:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-014-HDSL.jpg",
+    "answers": [
+      "Simétrico.",
+      "Sincrónico.",
+      "Asimétrico.",
+      "Asincrónico.",
+      "Ambas a y b.",
+      "Ambas a y d.",
+      "Ninguna de las Anteriores es Correcta."
+    ],
+    "correct": 5,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761932063830,
+    "question": "El Protocolo Normalizado que correspondía a los primeros tres niveles del modelo OSI (Física, Enlace y Red), que trabaja bajo a una topología que se la denomina malla, con modo de transmisión asincrónica y aplica detección y corrección de errores corresponde a:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-017-X-25.jpg",
+    "answers": [
+      "X-25",
+      "ISDN.",
+      "ATM.",
+      "SDH - Sonet.",
+      "HDSL.",
+      "Ninguna de las Anteriores es correcta."
+    ],
+    "correct": 0,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761932097906,
+    "question": "El Jitter es la variación en el tiempo en la llegada de los paquetes, causada por congestión de red, perdida de sincronización o por las diferentes rutas seguidas por los paquetes para llegar al destino y entre el punto inicial y final de la comunicación debiera ser inferior a 100 ms. Esta medida es parte del Protocolo:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-020-Jitter.jpg",
+    "answers": [
+      "SLA.",
+      "ATM.",
+      "RFC.",
+      "LRE.",
+      "MPLS.",
+      "Ninguna de las Anteriores es correcta."
+    ],
+    "correct": 0,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761932136183,
+    "question": "Una Red WAN telefónica, para realizar las llamadas entre corresponsales utiliza como principio básico para establecer los enlaces:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-015-Red-Telefonica.jpg",
+    "answers": [
+      "Protocolo H323.",
+      "Conmutación de Paquetes.",
+      "Conmutación de Circuitos.",
+      "Protocolo SIP.",
+      "Ambas a y d.",
+      "Ninguna de las Anteriores es correcta."
+    ],
+    "correct": 2,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761932195134,
+    "question": "Cuando transportamos datos en un canal STM-4 para una portadora de WAN de acceso a Internet, que nos permite tener un ancho de banda de 622 MBPS, el tipo de tecnología utilizada corresponde a:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-012-SDH.jpg",
+    "answers": [
+      "ISDN.",
+      "ADSL",
+      "Cablemódem (HFC).",
+      "PDH-T-CARRIER.",
+      "SONET.",
+      "Ninguna de las Anteriores es correcta."
+    ],
+    "correct": 4,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761932224627,
+    "question": "La Red WAN, creada como backbone primario para Internet 2, que posee servicios de conexión de alto rendimiento entre puntos de agregación regional, que comenzó a prestar servicios en enero de 1999 y es resultante del Proyecto UCAID corresponde a:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-016-Abilene.jpg",
+    "answers": [
+      "ARPANET.",
+      "MILNET.",
+      "ALOHA.",
+      "ABILENE.",
+      "STARTEL.",
+      "Ninguna de las Anteriores es correcta."
+    ],
+    "correct": 3,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761932268584,
+    "question": "El protocolo plasmado en un documento de carácter legal por el que una compañía que presta un servicio de comunicaciones de transporte a otra, donde se compromete a prestar el mismo bajo unas determinadas condiciones y con unas prestaciones mínimas corresponde a:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-019-SLA.jpg",
+    "answers": [
+      "LRE.",
+      "ATM.",
+      "RFC.",
+      "SLA.",
+      "MPLS.",
+      "Ninguna de las Anteriores es correcta."
+    ],
+    "correct": 3,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761932300564,
+    "question": "La red de abonado, dentro de la estructura de cablemódem, es la última derivación de cable coaxial hasta la base de conexión de abonado. Para entregar la señal de Video y datos utiliza tecnología:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-013-Ultima-Milla-Cablemodem.jpg",
+    "answers": [
+      "ISDN",
+      "ADSL",
+      "HDSL.",
+      "PDH-E-CARRIER.",
+      "X25.",
+      "ATM.",
+      "Ninguna de las Anteriores es Correcta."
+    ],
+    "correct": 1,
+    "thematic": "parcial2"
+  },
+  {
+    "id": 1761932334041,
+    "question": "El Protocolo Normalizado de transporte de datos estándar creado por la IETF y definido en el RFC 3031, que opera entre la capa de enlace de datos y la capa de red del modelo OSI y fue diseñado para unificar el servicio de transporte de datos para las redes basadas en circuitos y las basadas en paquetes corresponde a:",
+    "imageUrl": "https://miel.unlam.edu.ar/data2/evaluacion/2634/5-018-MPLS.jpg",
+    "answers": [
+      "ATM.",
+      "ISDN.",
+      "X-25.",
+      "SDH - Sonet.",
+      "MPLS.",
+      "LRE.",
+      "Ninguna de las Anteriores es Correcta."
+    ],
+    "correct": 4,
+    "thematic": "parcial2"
   }
 ]

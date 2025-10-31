@@ -30,18 +30,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalMessage = document.getElementById('modal-message');
     const modalConfirmBtn = document.getElementById('modal-confirm-btn');
     const modalCancelBtn = document.getElementById('modal-cancel-btn');
+    
+    // ELEMENTOS DEL NUEVO FLUJO
     const examSettingsModal = document.getElementById('exam-settings-modal');
+    const examSettingsTitle = document.getElementById('exam-settings-title'); // Nuevo ID
+    const examQuestionsCountLabel = document.getElementById('exam-questions-count-label'); // Nuevo ID
     const examDurationInput = document.getElementById('exam-duration');
     const examQuestionsCountInput = document.getElementById('exam-questions-count');
     const settingsCancelBtn = document.getElementById('settings-cancel-btn');
     const settingsStartBtn = document.getElementById('settings-start-btn');
     const cancelEditBtn = document.getElementById('cancel-edit-btn');
     const formTitle = document.getElementById('form-title');
+    const thematicSelector = document.getElementById('thematic-selector'); // Selector en el formulario ADMIN
+    const thematicSelectExam = document.getElementById('thematic-select-exam'); // Selector en el modal EXAMEN
+
     const imageViewerModal = document.getElementById('image-viewer-modal');
     const imageViewerImg = document.getElementById('image-viewer-img');
     const imageViewerClose = document.getElementById('image-viewer-close');
 
-    // NUEVOS ELEMENTOS PARA SELECCIÓN MÚLTIPLE
+    // ELEMENTOS DE SELECCIÓN MÚLTIPLE
     const deleteSelectedBtn = document.getElementById('delete-selected-btn');
     const selectAllCheckbox = document.getElementById('select-all-checkbox');
 
@@ -52,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const xIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
 
     let allQuestions = [], currentQuizQuestions = [], userAnswers = [], timer, timeLeft;
+    let selectedThematic = null;
 
     const applyTheme = (theme) => {
         body.classList.remove('light-mode', 'dark-mode');
@@ -65,16 +73,28 @@ document.addEventListener('DOMContentLoaded', () => {
         applyTheme(newTheme);
     });
 
+    // MODIFICADO: Ahora carga de un solo archivo y añade la temática si falta
     const loadQuestions = async () => {
         try {
             const response = await fetch('default-questions.json');
             if (!response.ok) throw new Error(`Error HTTP: ${response.status}`);
             const defaultQuestions = await response.json();
-            allQuestions = defaultQuestions;
-            saveQuestions(); 
+            
+            // Asegurar que todas las preguntas tengan una temática
+            defaultQuestions.forEach(q => {
+                if (!q.thematic) q.thematic = 'parcial1'; // Default a parcial1
+            });
+
+            const savedQuestions = localStorage.getItem('quizQuestions');
+            if (savedQuestions) {
+                allQuestions = JSON.parse(savedQuestions);
+            } else {
+                allQuestions = defaultQuestions;
+                saveQuestions(); 
+            }
         } catch (error) {
             console.error("No se pudieron cargar las preguntas predeterminadas.", error);
-            allQuestions = [];
+            allQuestions = JSON.parse(localStorage.getItem('quizQuestions') || '[]');
         }
     };
 
@@ -99,6 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
         addAnswerInput();
         formTitle.textContent = 'Añadir Nueva Pregunta';
         cancelEditBtn.classList.add('hidden');
+        // NUEVO: Setear el selector de temática a 'parcial1' por defecto
+        if (thematicSelector) thematicSelector.value = 'parcial1'; 
     };
     
     if(cancelEditBtn) cancelEditBtn.addEventListener('click', resetForm);
@@ -135,7 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     
-    // FUNCIÓN AUXILIAR PARA ACTUALIZAR EL ESTADO DEL BOTÓN DE ELIMINAR Y EL CHECKBOX "SELECCIONAR TODO"
     const updateDeleteSelectedButtonState = () => {
         if (!questionsList || !deleteSelectedBtn || !selectAllCheckbox) return;
         const checkboxes = questionsList.querySelectorAll('.question-checkbox');
@@ -163,7 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if(!questionsList) return;
         questionsList.innerHTML = '';
         
-        // Reiniciar el estado del checkbox "Seleccionar Todo"
         if (selectAllCheckbox) {
             selectAllCheckbox.checked = false;
             selectAllCheckbox.indeterminate = false;
@@ -171,17 +191,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         allQuestions.forEach((q, index) => {
             const li = document.createElement('li');
-            // MODIFICACIÓN: Agregar un checkbox con el ID de la pregunta
-            li.innerHTML = `<input type="checkbox" data-question-id="${q.id}" class="question-checkbox"><span>${q.question.substring(0, 40)}...</span><div class="action-buttons"><button data-index="${index}" class="edit-btn">${editIcon}</button><button data-index="${index}" class="delete-btn">${deleteIcon}</button></div>`;
+            const thematicDisplay = q.thematic === 'parcial1' ? 'P1' : 'P2';
+            li.innerHTML = `<input type="checkbox" data-question-id="${q.id}" class="question-checkbox"><span title="${q.question}">[${thematicDisplay}] ${q.question.substring(0, 30)}...</span><div class="action-buttons"><button data-index="${index}" class="edit-btn">${editIcon}</button><button data-index="${index}" class="delete-btn">${deleteIcon}</button></div>`;
             questionsList.appendChild(li);
         });
         
-        // Agregar listener para actualizar el estado del botón cuando un checkbox cambia
         questionsList.querySelectorAll('.question-checkbox').forEach(checkbox => {
             checkbox.addEventListener('change', updateDeleteSelectedButtonState);
         });
         
-        updateDeleteSelectedButtonState(); // Actualizar el estado inicial
+        updateDeleteSelectedButtonState();
     };
 
     if(selectAllCheckbox) {
@@ -201,15 +220,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             if (confirm(`¿Estás seguro de que quieres eliminar las ${selectedCheckboxes.length} pregunta(s) seleccionada(s)?`)) {
-                // Obtener los IDs de las preguntas a eliminar
                 const idsToDelete = Array.from(selectedCheckboxes).map(cb => parseInt(cb.dataset.questionId));
-                
-                // Filtrar el array de preguntas, manteniendo solo las que NO están en la lista de eliminación
                 allQuestions = allQuestions.filter(q => !idsToDelete.includes(q.id));
                 
                 saveQuestions();
                 renderAdminList();
-                resetForm(); // Limpiar el formulario en caso de que la pregunta que se estaba editando haya sido eliminada
+                resetForm();
             }
         });
     }
@@ -231,42 +247,53 @@ document.addEventListener('DOMContentLoaded', () => {
         const correctRadio = answersContainer.querySelector('input[type="radio"]:checked');
         if (!correctRadio) { alert('Por favor, marca una respuesta como correcta.'); return; }
         const correctIndex = Array.from(answerNodes).indexOf(correctRadio.closest('.answer-input-container'));
-        const questionData = { id: questionIdInput.value ? parseInt(questionIdInput.value) : Date.now(), question: questionInput.value, imageUrl: imageData, answers: answers, correct: correctIndex };
+        
+        // NUEVO: Obtener temática
+        const thematic = thematicSelector.value;
+
+        const questionData = { 
+            id: questionIdInput.value ? parseInt(questionIdInput.value) : Date.now(), 
+            question: questionInput.value, 
+            imageUrl: imageData, 
+            answers: answers, 
+            correct: correctIndex,
+            thematic: thematic 
+        };
+
         if (questionIdInput.value) {
             const index = allQuestions.findIndex(q => q.id === questionData.id);
             if(index !== -1) allQuestions[index] = questionData;
         } else { allQuestions.push(questionData); }
+
         saveQuestions();
         renderAdminList();
         resetForm();
     });
 
     if(questionsList) questionsList.addEventListener('click', (e) => {
-        // Ignorar clics en el checkbox para que no interfieran con la edición/eliminación individual
         if (e.target.closest('.question-checkbox')) return;
-
         const button = e.target.closest('button');
         if (!button) return;
         const index = button.dataset.index;
         if (index === undefined) return;
-
-        // Lógica de eliminación individual (manteniendo la compatibilidad)
         if (button.classList.contains('delete-btn')) {
             if (confirm('¿Estás seguro de que quieres eliminar esta pregunta?')) {
                 allQuestions.splice(index, 1);
                 saveQuestions();
                 renderAdminList();
-                resetForm(); // Limpiar el formulario en caso de que la pregunta que se estaba editando haya sido eliminada
+                resetForm();
             }
-        } 
-        // Lógica de edición individual
-        else if (button.classList.contains('edit-btn')) {
+        } else if (button.classList.contains('edit-btn')) {
             const questionToEdit = allQuestions[index];
             resetForm();
             formTitle.textContent = 'Editar Pregunta';
             cancelEditBtn.classList.remove('hidden');
             questionIdInput.value = questionToEdit.id;
             questionInput.value = questionToEdit.question;
+            
+            // NUEVO: Setear el selector de temática
+            if (thematicSelector) thematicSelector.value = questionToEdit.thematic || 'parcial1';
+
             currentImagePreview.innerHTML = '';
             if (questionToEdit.imageUrl?.startsWith('data:image')) {
                 document.querySelector('input[name="imageSource"][value="file"]').checked = true;
@@ -302,6 +329,9 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 const importedQuestions = JSON.parse(e.target.result);
                 if (Array.isArray(importedQuestions) && confirm('¿Quieres reemplazar las preguntas actuales con las del archivo? (Se restablecerán al recargar la página)')) {
+                    importedQuestions.forEach(q => {
+                        if (!q.thematic) q.thematic = 'parcial1'; 
+                    });
                     allQuestions = importedQuestions;
                     saveQuestions(); renderAdminList(); resetForm();
                     alert(`Se importaron ${importedQuestions.length} preguntas.`);
@@ -311,25 +341,94 @@ document.addEventListener('DOMContentLoaded', () => {
         if(event.target.files[0]) fileReader.readAsText(event.target.files[0]);
     });
     
+    // MODIFICADO: Muestra el modal de ajustes y precarga las opciones de temática
     const showExamSettings = () => {
-        if (allQuestions.length === 0) { alert('No hay preguntas para iniciar el examen.'); return; }
-        examQuestionsCountInput.value = Math.min(allQuestions.length, 10); 
-        examQuestionsCountInput.max = allQuestions.length;
+        const p1Questions = allQuestions.filter(q => q.thematic === 'parcial1');
+        const p2Questions = allQuestions.filter(q => q.thematic === 'parcial2');
+        
+        const totalP1 = p1Questions.length;
+        const totalP2 = p2Questions.length;
+
+        if (totalP1 === 0 && totalP2 === 0) { 
+            alert('No hay preguntas disponibles para realizar el examen.'); 
+            return; 
+        }
+
+        if (examSettingsTitle) examSettingsTitle.textContent = 'Configurar Examen';
+
+        // Rellenar el selector de temática en el modal
+        if (thematicSelectExam) {
+            thematicSelectExam.innerHTML = '';
+            if (totalP1 > 0) {
+                thematicSelectExam.innerHTML += `<option value="parcial1">Parcial 1 (Total: ${totalP1})</option>`;
+            }
+            if (totalP2 > 0) {
+                thematicSelectExam.innerHTML += `<option value="parcial2">Parcial 2 (Total: ${totalP2})</option>`;
+            }
+        }
+        
+        // Configuración inicial basada en la primera opción disponible
+        const initialThematic = thematicSelectExam.value;
+        updateSettingsForThematic(initialThematic);
+
         examSettingsModal.classList.add('active');
     };
+
+    // NUEVA FUNCIÓN: Actualiza el contador de preguntas al cambiar la temática
+    const updateSettingsForThematic = (thematicKey) => {
+        const questions = allQuestions.filter(q => q.thematic === thematicKey);
+        const totalQuestions = questions.length;
+        
+        if (totalQuestions > 0) {
+            examQuestionsCountInput.max = totalQuestions;
+            if (parseInt(examQuestionsCountInput.value) > totalQuestions || parseInt(examQuestionsCountInput.value) < 1) {
+                examQuestionsCountInput.value = Math.min(totalQuestions, 10);
+            }
+        } else {
+            examQuestionsCountInput.max = 0;
+            examQuestionsCountInput.value = 0;
+        }
+        
+        if(examQuestionsCountLabel) {
+             examQuestionsCountLabel.innerHTML = `Nº de Preguntas (Máx: ${totalQuestions})`;
+        }
+    };
     
+    // Listener para actualizar al cambiar la temática en el modal de ajustes
+    if (thematicSelectExam) {
+        thematicSelectExam.addEventListener('change', (e) => {
+            updateSettingsForThematic(e.target.value);
+        });
+    }
+
     if(settingsStartBtn) settingsStartBtn.addEventListener('click', () => {
+        const thematicKey = thematicSelectExam.value;
+        const questionsSource = allQuestions.filter(q => q.thematic === thematicKey);
+        const totalQuestions = questionsSource.length;
+        
         const duration = parseInt(examDurationInput.value);
         const count = parseInt(examQuestionsCountInput.value);
-        if (isNaN(duration) || isNaN(count) || duration < 1 || count < 1) { alert('Por favor, introduce valores válidos.'); return; }
-        if (count > allQuestions.length) { alert(`La cantidad máxima de preguntas es: ${allQuestions.length}`); return; }
+
+        if (isNaN(duration) || isNaN(count) || duration < 1 || count < 1) { 
+            alert('Por favor, introduce valores válidos.'); 
+            return; 
+        }
+        if (count > totalQuestions) { 
+            alert(`La cantidad máxima de preguntas para este examen es: ${totalQuestions}`); 
+            return; 
+        }
+        
+        selectedThematic = thematicKey; // Guardar la temática seleccionada
+
         examSettingsModal.classList.remove('active');
-        startGame(duration, count);
+        startGame(duration, count, questionsSource);
     });
+    
     if(settingsCancelBtn) settingsCancelBtn.addEventListener('click', () => examSettingsModal.classList.remove('active'));
 
-    const startGame = (durationInMinutes, questionCount) => {
-        currentQuizQuestions = [...allQuestions].sort(() => 0.5 - Math.random()).slice(0, questionCount);
+    // MODIFICADO: Recibe la fuente de preguntas ya filtrada
+    const startGame = (durationInMinutes, questionCount, questionsSource) => {
+        currentQuizQuestions = [...questionsSource].sort(() => 0.5 - Math.random()).slice(0, questionCount);
         userAnswers = new Array(currentQuizQuestions.length).fill(null);
         renderAllQuestions(allQuestionsContainer, currentQuizQuestions, false);
         startTimer(durationInMinutes);
@@ -428,7 +527,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const totalQuestions = currentQuizQuestions.length;
         const percentageCorrect = totalQuestions > 0 ? (score / totalQuestions) * 100 : 0;
         const isApproved = percentageCorrect >= 70;
-        finalSummary.innerHTML = `<p class="summary-score">CORRECTAS: ${score} de ${totalQuestions}</p><p class="summary-status ${isApproved ? 'approved' : 'failed'}">${isApproved ? 'APROBADO' : 'DESAPROBADO'}</p>`;
+        
+        const thematicName = selectedThematic === 'parcial1' ? 'Parcial 1' : 'Parcial 2';
+        
+        finalSummary.innerHTML = `<p class="summary-score">Examen de ${thematicName}: ${score} de ${totalQuestions} correctas.</p><p class="summary-status ${isApproved ? 'approved' : 'failed'}">${isApproved ? 'APROBADO' : 'DESAPROBADO'}</p>`;
     };
     
     function openImageViewer(src) { imageViewerImg.setAttribute('src', src); imageViewerModal.classList.add('active'); }

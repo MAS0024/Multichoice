@@ -52,6 +52,14 @@
                         <input type="hidden" id="question-id">
                         <textarea id="question-input" placeholder="Escribe el texto de la pregunta..." required></textarea>
                         
+                        <div class="form-group">
+                            <label for="thematic-selector">Temática:</label>
+                            <select id="thematic-selector" required>
+                                <option value="parcial1">Parcial 1</option>
+                                <option value="parcial2">Parcial 2</option>
+                            </select>
+                        </div>
+
                         <div class="image-source-selector">
                             <label><input type="radio" name="imageSource" value="url" checked> URL</label>
                             <label><input type="radio" name="imageSource" value="file"> Archivo</label>
@@ -104,16 +112,23 @@
             </div>
         </div>
     </div>
+    
     <div id="exam-settings-modal" class="modal">
         <div class="modal-content">
-            <h3>Configurar Examen</h3>
+            <h3 id="exam-settings-title">Configurar Examen</h3>
             <form id="exam-settings-form">
+                
+                <div class="form-group">
+                    <label for="thematic-select-exam">Seleccionar Temática:</label>
+                    <select id="thematic-select-exam" required></select>
+                </div>
+
                 <div class="form-group">
                     <label for="exam-duration">Duración (minutos)</label>
                     <input type="number" id="exam-duration" value="10" min="1" required>
                 </div>
                 <div class="form-group">
-                    <label for="exam-questions-count">Nº de Preguntas</label>
+                    <label for="exam-questions-count" id="exam-questions-count-label">Nº de Preguntas</label>
                     <input type="number" id="exam-questions-count" value="10" min="1" required>
                 </div>
             </form>

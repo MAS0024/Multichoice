@@ -397,7 +397,9 @@ body.dark-mode .selected-count {
     flex-direction: column; 
     gap: 1.25rem; 
 }
-textarea, input[type="text"], input[type="number"] { 
+
+/* MODIFICADO: Añadiendo 'select' para unificar estilos de inputs */
+textarea, input[type="text"], input[type="number"], select { 
     width: 100%; 
     padding: 10px 12px; 
     border-radius: var(--radius-sm); 
@@ -409,13 +411,14 @@ textarea, input[type="text"], input[type="number"] {
     transition: border-color 0.2s, box-shadow 0.2s; 
     color: var(--primary-text-color); 
 }
-textarea:focus, input:focus { 
+textarea:focus, input:focus, select:focus { 
     outline: none; 
     border-color: var(--accent-color); 
     box-shadow: 0 0 0 3px rgba(10, 10, 10, 0.05); 
 }
 body.dark-mode textarea:focus, 
-body.dark-mode input:focus {
+body.dark-mode input:focus,
+body.dark-mode select:focus {
     box-shadow: 0 0 0 3px rgba(250, 250, 250, 0.05);
 }
 .answer-input-container { 
@@ -499,7 +502,7 @@ body.dark-mode input:focus {
     border: 1px solid var(--border-color); 
     display: flex; 
     align-items: center;
-    gap: 12px;
+    gap: 8px; 
     transition: all 0.2s; 
 }
 #questions-list li:hover { 
@@ -509,39 +512,50 @@ body.dark-mode input:focus {
 #questions-list li input[type="checkbox"] {
     display: none;
 }
-#questions-list li .checkbox-label {
+/* Estilos para el checkbox de selección múltiple */
+.selection-controls input[type="checkbox"],
+#questions-list li input.question-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     width: 18px;
     height: 18px;
     border: 1.5px solid var(--border-color);
     border-radius: 4px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-right: 8px;
     flex-shrink: 0;
     transition: all 0.2s ease;
     position: relative;
+    background-color: var(--surface-color);
+    display: block !important; 
+    margin-left: 0; 
 }
-#questions-list li .checkbox-label::after {
-    content: '';
-    width: 10px;
-    height: 10px;
-    background-color: var(--accent-color);
-    border-radius: 2px;
-    opacity: 0;
-    transform: scale(0);
-    transition: all 0.2s ease;
-}
-#questions-list li input[type="checkbox"]:checked + .checkbox-label {
+.selection-controls input[type="checkbox"]:checked,
+#questions-list li input.question-checkbox:checked {
     border-color: var(--accent-color);
+    background-color: var(--accent-color);
 }
-#questions-list li input[type="checkbox"]:checked + .checkbox-label::after {
-    opacity: 1;
-    transform: scale(1);
+.selection-controls input[type="checkbox"]:checked::after,
+#questions-list li input.question-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5px;
+    height: 10px;
+    border: solid var(--surface-color); 
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
 }
-#questions-list li .question-text {
-    flex: 1;
-    font-size: 0.95rem;
+
+#questions-list li > span {
+    flex: 1; 
+    min-width: 0; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.95rem; 
 }
 .action-buttons {
     display: flex;
@@ -598,88 +612,21 @@ body.dark-mode input:focus {
     animation: zoomInModal 0.25s ease;
     border: 1px solid var(--border-color);
 }
-
-/* --- Estilos para la función de Selección Múltiple en la Administración --- */
-
-/* Estilo del contenedor de los controles (Seleccionar Todo y Eliminar Seleccionadas) */
-.admin-list-container .selection-controls {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding-bottom: 0.75rem; 
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 0.75rem; /* Separación de la lista de preguntas */
-    gap: 8px; /* Mantener la propiedad original en caso de que necesite ajustarse en media queries */
+.modal-content .form-group {
+    text-align: left;
+    margin-bottom: 1.25rem;
 }
-.admin-list-container .selection-controls label {
-    display: flex;
-    align-items: center;
-    font-size: 0.95rem;
+.modal-content .form-group label {
+    display: block;
+    margin-bottom: 6px;
     font-weight: 500;
     color: var(--primary-text-color);
-    cursor: pointer;
-    user-select: none;
 }
-
-/* Estilo unificado para la apariencia customizada de todos los checkboxes de selección */
-.selection-controls input[type="checkbox"],
-#questions-list li input.question-checkbox {
-    /* Desactivar la apariencia nativa */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    border: 1.5px solid var(--border-color);
-    border-radius: 4px;
-    cursor: pointer;
-    margin-right: 8px;
-    flex-shrink: 0;
-    transition: all 0.2s ease;
-    position: relative;
-    background-color: var(--surface-color);
-    /* Asegurar que se muestre, sobrescribiendo el display: none; existente */
-    display: block !important; 
-    margin-left: 0; /* Asegurar que no haya margen izquierdo indeseado en el ítem de la lista */
-}
-/* Estilo cuando el checkbox está marcado */
-.selection-controls input[type="checkbox"]:checked,
-#questions-list li input.question-checkbox:checked {
-    border-color: var(--accent-color);
-    background-color: var(--accent-color);
-}
-/* Estilo del "tick" (marca) dentro del checkbox */
-.selection-controls input[type="checkbox"]:checked::after,
-#questions-list li input.question-checkbox:checked::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 5px;
-    height: 10px;
-    border: solid var(--surface-color); /* Color del tick (blanco/claro) */
-    border-width: 0 2px 2px 0;
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-
-/* Ajuste del botón de eliminar seleccionadas para que se alinee correctamente */
-#delete-selected-btn {
-    margin: 0; /* Sobrescribir el margen de .btn */
-}
-
-/* Ajuste a los elementos de la lista para el nuevo layout */
-#questions-list li {
-    gap: 8px; /* Espacio entre el checkbox y el texto */
-    align-items: center;
-}
-/* Estilo para el texto de la pregunta para que no desborde */
-#questions-list li > span {
-    flex: 1; 
-    min-width: 0; /* Permite que el ellipsis funcione en contenedores flex */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 0.95rem; /* Asegurar el tamaño de fuente */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 1.5rem;
 }
 
 @keyframes fadeInModalBg { 
@@ -767,11 +714,6 @@ body.dark-mode input:focus {
     }
     #final-summary .summary-score, #final-summary .summary-status {
         text-align: center;
-    }
-    .admin-list-container .list-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
     }
     .admin-list-container .selection-controls {
         flex-direction: column;
